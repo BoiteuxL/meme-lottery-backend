@@ -14,7 +14,9 @@ const databaseConfig: DatabaseConfig = {
     connectionString: process.env.DATABASE_URL || 'unknown',
     databaseName: process.env.DATABASE_NAME || 'unknown',
     collections: [
-        "gifMemes"
+        "gifMemes",
+        "imageMemes",
+        "videoMemes",
     ]
 };
 
