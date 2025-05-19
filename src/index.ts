@@ -1,8 +1,11 @@
-"use strict"
+"use strict";
 
-import app from './app';
-import config from './config/config';
+import app from './App';
+import appConfig from './config/app.config';
+import DatabaseService from "./services/Database.service";
 
-app.listen(config.port, () => {
-    console.log(`Server running on port ${config.port}`);
+app.listen(appConfig.port, async () => {
+    console.log(`Server running on port ${appConfig.port}`);
+    await DatabaseService.open();
 });
+
